@@ -1,1 +1,8 @@
-Aqui estaran todos los archivos correspondientes a la programacion de toda la interfaz
+# CintaTransportadora
+Este es un proyecto para Arquitectura de Software.
+
+
+>> Agus: Esta linea la edite desde mi compu y hice un push
+  ## Agus es el mas groso de los grosos 
+
+>> Emanuel: a.
