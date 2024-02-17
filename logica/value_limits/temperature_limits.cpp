@@ -3,8 +3,8 @@
 // -----------------------------------------------------------------------------
 
 bool TemperatureLimits::IsWithinLimits(Data data) {
-  return (static_cast<float> data.GetValue() > this->lower_limit) &&
-         (static_cast<float> data.GetValue() < this->upper_limit);
+  return (data.GetValue().analog > this->lower_limit) &&
+         (data.GetValue().analog < this->upper_limit);
 }
 
 // -----------------------------------------------------------------------------

@@ -3,13 +3,13 @@
 
 #include "controlboard_base.h"
 
-class ControlBoardArduino {
+class ControlBoardArduino : public ControlBoardBase {
 public:
-  IControlBoard();
-  ~IControlBoard() = default;
-  UpdateData() override;
-  Data GetData(Port port) override;
-  WriteToPort(Data data, Port port) override;
+  ControlBoardArduino() {}
+  ~ControlBoardArduino() = default;
+  void UpdateData() override;
+  Data GetData(Port port) const override;
+  void WriteToPort(Data data, Port port) override;
 };
 
 #endif

@@ -5,9 +5,9 @@
 
 class IState {
 public:
-  virtual ~State() = default;
+  virtual ~IState() = default;
   virtual float CalculateSpeed() = 0;
-  virtual StateType GetType() = 0;
+  virtual StateType GetType() const = 0;
 };
 
 #endif

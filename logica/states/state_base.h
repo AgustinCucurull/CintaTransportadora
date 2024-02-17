@@ -5,16 +5,15 @@
 #include "istate.h"
 //#include <cmath> // for std::abs
 
-class StateBase : public ISensor {
+class StateBase : public IState {
 protected:
+  ~StateBase() = default;
   Belt *context;
   StateType type;
   float auxiliary_speed; // intermediate speeds when accelerating/decelerating
 
-  // static float epsilon = 0.1f;
-  // bool CompareEqualFloats(float &a, float &b) {
-  //   return std::abs(a - b) < epsilon;
-  // }
+public:
+  StateBase(Belt* c) : context(c) {}
 };
 
 #endif

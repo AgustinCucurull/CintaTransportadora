@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 // Getters
 
-StateType StateRunning::GetType() {
+StateType StateRunning::GetType() const {
   return this->type;
 }
 
@@ -11,12 +11,12 @@ StateType StateRunning::GetType() {
 // State Operationsn
 
 float StateRunning::CalculateSpeed() {
-  if (this->auxiliary_speed < context->objective_speed) {
+  if (this->auxiliary_speed < this->context->GetObjectiveSpeed()) {
     this->auxiliary_speed += 1.0f;
   }
 
-  if (this->auxiliary_speed > context->objective_speed) {
-    this->auxiliary_speed = context->objective_speed;
+  if (this->auxiliary_speed > this->context->GetObjectiveSpeed()) {
+    this->auxiliary_speed = context->GetObjectiveSpeed();
   }
 
   return this->auxiliary_speed;

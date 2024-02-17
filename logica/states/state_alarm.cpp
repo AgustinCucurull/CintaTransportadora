@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 // Getters
 
-StateType StateAlarm::GetType() {
+StateType StateAlarm::GetType() const {
   return this->type;
 }
 

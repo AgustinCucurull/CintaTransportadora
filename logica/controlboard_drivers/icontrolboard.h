@@ -7,9 +7,9 @@
 class IControlBoard {
 public:
   virtual ~IControlBoard() = default;
-  virtual UpdateData() = 0;
-  virtual Data GetData(Port port) = 0;
-  virtual WriteToPort(Data data, Port port) = 0;
+  virtual void UpdateData() = 0;
+  virtual Data GetData(Port port) const = 0;
+  virtual void WriteToPort(Data data, Port port) = 0;
 };
 
 #endif

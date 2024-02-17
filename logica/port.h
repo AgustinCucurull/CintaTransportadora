@@ -14,6 +14,10 @@ public:
   Port(std::string code_, uint8_t address_) : code(code_), address(address_) {}
   ~Port() = default;
 
+  bool operator==(const Port& other) const {
+    return this->code == other.code && this->address == other.address;
+  }
+
   std::string GetCode();
   uint8_t GetAddress();
 

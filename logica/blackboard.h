@@ -2,8 +2,10 @@
 #define __BLACKBOARD__
 
 #include <vector>
+#include <memory>
 #include <string>
 #include "./sensors/isensor.h"
+#include "./controlboard_drivers/icontrolboard.h"
 #include "belt.h"
 
 class BlackBoard {
@@ -11,8 +13,8 @@ private:
   BlackBoard() {} // Prevent the constructor from being called with new
                   // externally
 
-  static BlackBoard *instance = nullptr;
-  ControlBoard *control_board = nullptr;
+  static BlackBoard *instance;
+  std::shared_ptr<IControlBoard> control_board;
   bool alarm_active = false;
 
   std::vector<ISensor*> sensors;
@@ -20,10 +22,10 @@ private:
 
 public:
   // Not clonable
-  Singleton(Singleton &other) = delete;
+  BlackBoard(BlackBoard &other) = delete;
 
   // Not assignable
-  void operator=(const Singleton &) = delete;
+  void operator=(const BlackBoard &) = delete;
 
   // Delete instance and vectors upon destruction
   ~BlackBoard() {
@@ -46,13 +48,14 @@ public:
   }
 
   static BlackBoard *GetInstance();
-  void SetControlBoard(ControlBoard* &board);
+  void SetControlBoard(std::shared_ptr<IControlBoard> board);
 
   void UpdateSensors();
   void UpdateBelts();
 
   Data ReadSensor(std::string &name);
-  void WriteToBoard(Data data, Port port);
+  Data ReadPort(Port port);
+  void WritePort(Port port, Data data);
 
   void AddSensor(ISensor* &sensor);
   void AddBelt(Belt* &belt);
@@ -60,5 +63,8 @@ public:
   void RemoveSensor(std::string &name);
   void RemoveBelt(std::string &name);
 };
+
+// Definition of the static member variable outside the class
+BlackBoard* BlackBoard::instance = nullptr;
 
 #endif

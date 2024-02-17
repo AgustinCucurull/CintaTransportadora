@@ -3,12 +3,12 @@
 // -----------------------------------------------------------------------------
 // Getters
 
-Value Data::GetValue() {
+Value Data::GetValue() const {
   return this->value;
 }
 
-Port Data::GetSenderPort() {
-  return this->sender_port;
+Port Data::GetPort() const {
+  return this->port;
 }
 
 // -----------------------------------------------------------------------------
@@ -18,8 +18,8 @@ void Data::SetValue(Value v) {
   this->value = v;
 }
 
-void Data::SetSenderPort(Port p) {
-  this->sender_port = p;
+void Data::SetPort(Port p) {
+  this->port = p;
 }
 
 // -----------------------------------------------------------------------------

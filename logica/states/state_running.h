@@ -1,13 +1,13 @@
 #ifndef __STATE_RUNNING__
 #define __STATE_RUNNING__
 
-#include "istate.h"
+#include "state_base.h"
 
 class Belt;
 
 class StateRunning : public StateBase {  
 public:
-  StateRunning(Belt *context_) : context(context_) {
+  StateRunning(Belt* context_) : StateBase(context_) {
     type = StateType::RUNNING;
     auxiliary_speed = context->GetSpeed();
   }
@@ -15,7 +15,7 @@ public:
   ~StateRunning() = default;
   
   float CalculateSpeed() override;
-  StateType GetType() override;
+  StateType GetType() const override;
 };
 
 #endif

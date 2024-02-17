@@ -14,11 +14,11 @@ uint8_t Port::GetAddress() {
 // -----------------------------------------------------------------------------
 // Setters
 
-void Port::SetCode(st::string code_) {
+void Port::SetCode(std::string code_) {
   this->code = code_;
 }
 
-void SetAddress(uint8_t address_) {
+void Port::SetAddress(uint8_t address_) {
   this->address = address_;
 }
 

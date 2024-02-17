@@ -1,11 +1,15 @@
 #include <cmath>
 #include "belt.h"
+#include "./states/state_alarm.h"
+#include "./states/state_halted.h"
+#include "./states/state_running.h"
 
-// auxiliary function
-// (epsilon was chosen as the second LSD in my measurements, plus a margin, to
-//  ensure that my readings eventually fall within this range)
-template <float epsilon = 0.15f>
+// Auxiliary function.
+// * Epsilon was chosen as the minimal value of the second LSD in my
+// * measurements (0.1), plus a margin (+0.05), to ensure that my readings
+// * eventually fall within this range.
 bool AreFloatsEqual(float a, float b) {
+  float epsilon = 0.15f;
   return std::abs(a - b) < epsilon;
 }
 
@@ -26,7 +30,7 @@ void Belt::SetLength(float length_) {
 
 void Belt::SetObjectiveSpeed(float speed_) {
   this->objective_speed = speed_;
-  this->time = this->length / this->speed;
+  this->time = this->length / speed_;
 }
 
 void Belt::SetTime(float time_) {
@@ -37,23 +41,27 @@ void Belt::SetTime(float time_) {
 // -----------------------------------------------------------------------------
 // Getters
 
-std::string Belt::GetName() {
+Port Belt::GetPort() const {
+  return this->port;
+}
+
+std::string Belt::GetName() const {
   return this->name;
 }
 
-float Belt::GetLength() {
+float Belt::GetLength() const {
   return this->length;
 }
 
-float Belt::GetSpeed() {
+float Belt::GetSpeed() const {
   return this->current_speed;
 }
 
-float Belt::GetObjectiveSpeed() {
+float Belt::GetObjectiveSpeed() const {
   return this->objective_speed;
 }
 
-float Belt::GetTime() {
+float Belt::GetTime() const {
   return this->time;
 }
 
@@ -73,26 +81,29 @@ void Belt::UpdateAlarmStatus(bool alarm) {
 // *    transition to the state "Halted".
 // * If these conditions are not met, the state remains unchanged.
 void Belt::UpdateState() {
-  if (this->alarm_active) {
-    this->state = StateAlarm(this);
+  if (this->alarm_active && (this->state->GetType() != StateType::ALARM)) {
+    this->state = std::make_unique<StateAlarm>(this);
     return;
   }
   
-  switch(this->state.GetType()) {
+  switch(this->state->GetType()) {
   case StateType::HALTED:
     if (this->objective_speed > 0.0f) {
-      this->state = StateRunning(this);
+      this->state = std::make_unique<StateRunning>(this);
     }
     break;
   case StateType::RUNNING:
     if (AreFloatsEqual(this->objective_speed, 0.0f)) {
-      this->state = StateHalted(this);
+      this->state = std::make_unique<StateHalted>(this);
     }
+    break;
+  default:
+    this->state = std::make_unique<StateHalted>(this);
   }
 }
 
 void Belt::UpdateSpeed() {
-  this->current_speed = this->state.CalculateSpeed();
+  this->current_speed = this->state->CalculateSpeed();
 }
 
 // -----------------------------------------------------------------------------

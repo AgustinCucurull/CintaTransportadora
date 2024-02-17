@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 // Getters
 
-StateType StateHalted::GetType() {
+StateType StateHalted::GetType() const {
   return this->type;
 }
 

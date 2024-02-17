@@ -5,8 +5,8 @@
 
 class IValueLimits {
 public:
-  virtual ~Limtis() = default;
-  virtual bool IsWithinLimits(Value value) = 0;
+  virtual ~IValueLimits() = default;
+  virtual bool IsWithinLimits(Data data) = 0;
 };
 
 #endif

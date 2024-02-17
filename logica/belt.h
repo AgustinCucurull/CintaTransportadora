@@ -2,7 +2,9 @@
 #define __BELT__
 
 #include <string>
+#include <memory>
 #include "./states/istate.h"
+#include "./states/state_base.h"
 #include "./states/state_type.h"
 #include "port.h"
 
@@ -18,24 +20,24 @@ protected:
 
   bool alarm_active = false;
   bool belt_running = false;
-  State state;
+  std::unique_ptr<IState> state;
 
 public:
   Belt(Port port_) : port(port_) { UpdateState(); }
   ~Belt() = default;
 
-  void SetPort(std::string port_);
+  void SetPort(Port port_);
   void SetName(std::string name_);
   void SetLength(float length_);
   void SetObjectiveSpeed(float speed_);
   void SetTime(float time_);
 
-  Port GetPort();
-  std::string GetName();
-  float GetLength();
-  float GetSpeed();
-  float GetObjectiveSpeed();
-  float GetTime();
+  Port GetPort() const;
+  std::string GetName() const;
+  float GetLength() const;
+  float GetSpeed() const;
+  float GetObjectiveSpeed() const;
+  float GetTime() const;
 
   void UpdateAlarmStatus(bool alarm);
   void UpdateState();

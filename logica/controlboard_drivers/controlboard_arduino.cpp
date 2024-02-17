@@ -4,9 +4,9 @@ void ControlBoardArduino::UpdateData() {
   return; // stubbed
 }
 
-Data ControlBoardArduino::GetData(Port port) {
+Data ControlBoardArduino::GetData(Port port) const {
   for (auto &data : v_data) {
-    if (data.GetSenderPort() == port) {
+    if (data.GetPort() == port) {
       return data; // ensure port is valid before calling this
     }
   }

@@ -6,23 +6,22 @@
 union Value {
   std::uint32_t digital;
   float analog;
-}
+};
 
 class Data {
 private:
   Value value;
-  // Port sender_port;
   Port port;
 
 public:
   Data() {}
-  Data(Value v, Port p) : value(v), sender_port(p) {}
+  Data(Value v, Port p) : value(v), port(p) {}
   ~Data() = default;
 
-  Value GetValue();
-  Port GetSenderPort();
+  Value GetValue() const;
+  Port GetPort() const;
   void SetValue(Value v);
-  void SetSenderPort(Port p);
+  void SetPort(Port p);
 };
 
 #endif

@@ -36,7 +36,7 @@ void AddSensor(BlackBoard *blackboard, ProgramState program_state) {
 }
 
 int main(int argc, char const *argv[]) {
-  ControlBoard *board_arduino = new ControlBoardArduino;
+  std::shared_ptr<IControlBoard> board_arduino = new ControlBoardArduino;
   // Initialize board_arduino
   // (...)
 

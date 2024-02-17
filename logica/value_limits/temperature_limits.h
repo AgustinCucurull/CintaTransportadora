@@ -9,7 +9,7 @@ class TemperatureLimits : public IValueLimits {
 public:
   TemperatureLimits(float lower, float upper) : lower_limit(lower), upper_limit(upper_limit) {}
   ~TemperatureLimits() = default;
-  bool IsWithinLimits(Value value) override;
+  bool IsWithinLimits(Data data) override;
 };
 
 #endif
