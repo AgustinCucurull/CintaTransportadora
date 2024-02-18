@@ -1,0 +1,3275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+font: 9pt &quot;Kollektif&quot;;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="f_controladores">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,10">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>9</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="f_btns_controladores">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+	background-color: rgb(25, 25, 25);
+}
+
+QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,1,1,10">
+          <property name="topMargin">
+           <number>30</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="btn_c_1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background-color: rgb(63, 63, 63);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+            </property>
+            <property name="text">
+             <string>1</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_c_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background-color: rgb(63, 63, 63);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+            </property>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_addcontroller_1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>40</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	background-color: rgb(63, 63, 63);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+            </property>
+            <property name="text">
+             <string>+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="controlador_1">
+          <layout class="QVBoxLayout" name="verticalLayout_35">
+           <item>
+            <widget class="QFrame" name="frame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,10">
+              <item>
+               <widget class="QFrame" name="f_superior_c_1">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(25, 25, 25);
+color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,1,1,2,2,1,2,1">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>5</number>
+                 </property>
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>55</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="font">
+                    <font>
+                     <family>Kollektif</family>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Controlador 1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>55</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_desconectado">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Kollektif</family>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>DESCONECTADO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_conectado">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(0, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>CONECTADO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_alarma_1">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Kollektif</family>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton {
+	background-color: rgb(255, 0, 0);	
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                   </property>
+                   <property name="text">
+                    <string>ALARMA</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>55</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="f_inferior_c_1">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,2">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="frame_3">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(25, 25, 25);</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,20,3">
+                    <item>
+                     <widget class="QLabel" name="label_2">
+                      <property name="text">
+                       <string>CINTAS</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_5">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_6">
+                       <item>
+                        <widget class="QFrame" name="f_cinta_1_c_5">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="3,1">
+                          <item>
+                           <widget class="QFrame" name="frame_23">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_15" stretch="1,1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_cinta_1_c_5">
+                               <property name="text">
+                                <string>CINTA 1</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_24">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="3,1">
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QProgressBar" name="pb_cinta_1_c_5">
+                                  <property name="styleSheet">
+                                   <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                                  </property>
+                                  <property name="value">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignCenter</set>
+                                  </property>
+                                  <property name="textVisible">
+                                   <bool>true</bool>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="frame_25">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="3,1">
+                                   <property name="spacing">
+                                    <number>5</number>
+                                   </property>
+                                   <property name="leftMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="rightMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="bottomMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="l_vel_cinta_1_c_5">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="text">
+                                      <string>0</string>
+                                     </property>
+                                     <property name="alignment">
+                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_9">
+                                     <property name="text">
+                                      <string>m/s</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_26">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_16" stretch="1,1">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QPushButton" name="btn_editar_cinta_1_c_5">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Editar</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="pushButton_7">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(170, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Parar</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="f_cinta_1_c_6">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="3,1">
+                          <item>
+                           <widget class="QFrame" name="frame_27">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_17" stretch="1,1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_cinta_1_c_6">
+                               <property name="text">
+                                <string>CINTA 2</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_28">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_22" stretch="3,1">
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QProgressBar" name="pb_cinta_1_c_6">
+                                  <property name="styleSheet">
+                                   <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                                  </property>
+                                  <property name="value">
+                                   <number>25</number>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignCenter</set>
+                                  </property>
+                                  <property name="textVisible">
+                                   <bool>true</bool>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="frame_29">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="3,1">
+                                   <property name="spacing">
+                                    <number>5</number>
+                                   </property>
+                                   <property name="leftMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="rightMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="bottomMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="l_vel_cinta_1_c_6">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="text">
+                                      <string>0</string>
+                                     </property>
+                                     <property name="alignment">
+                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_10">
+                                     <property name="text">
+                                      <string>m/s</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_30">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_18" stretch="1,1">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QPushButton" name="btn_editar_cinta_1_c_6">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Editar</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="pushButton_8">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(170, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Parar</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="f_cinta_1_c_7">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="3,1">
+                          <item>
+                           <widget class="QFrame" name="frame_31">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_19" stretch="1,1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_cinta_1_c_7">
+                               <property name="text">
+                                <string>CINTA 3</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_32">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_25" stretch="3,1">
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QProgressBar" name="pb_cinta_1_c_7">
+                                  <property name="styleSheet">
+                                   <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                                  </property>
+                                  <property name="value">
+                                   <number>100</number>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignCenter</set>
+                                  </property>
+                                  <property name="textVisible">
+                                   <bool>true</bool>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="frame_33">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_26" stretch="3,1">
+                                   <property name="spacing">
+                                    <number>5</number>
+                                   </property>
+                                   <property name="leftMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="rightMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="bottomMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="l_vel_cinta_1_c_7">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="text">
+                                      <string>0</string>
+                                     </property>
+                                     <property name="alignment">
+                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_11">
+                                     <property name="text">
+                                      <string>m/s</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_34">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_20" stretch="1,1">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QPushButton" name="btn_editar_cinta_1_c_7">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Editar</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="pushButton_9">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(170, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Parar</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="f_cinta_1_c_8">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="3,1">
+                          <item>
+                           <widget class="QFrame" name="frame_35">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_21" stretch="1,1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_cinta_1_c_8">
+                               <property name="text">
+                                <string>CINTA 4</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_36">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_28" stretch="3,1">
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QProgressBar" name="pb_cinta_1_c_8">
+                                  <property name="styleSheet">
+                                   <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                                  </property>
+                                  <property name="value">
+                                   <number>100</number>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignCenter</set>
+                                  </property>
+                                  <property name="textVisible">
+                                   <bool>true</bool>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="frame_37">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="3,1">
+                                   <property name="spacing">
+                                    <number>5</number>
+                                   </property>
+                                   <property name="leftMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="rightMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="bottomMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="l_vel_cinta_1_c_8">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="text">
+                                      <string>0</string>
+                                     </property>
+                                     <property name="alignment">
+                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_12">
+                                     <property name="text">
+                                      <string>m/s</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_38">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_22" stretch="1,1">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QPushButton" name="btn_editar_cinta_1_c_8">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Editar</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="pushButton_10">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(170, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Parar</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="f_cinta_1_c_9">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_30" stretch="3,1">
+                          <item>
+                           <widget class="QFrame" name="frame_39">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_23" stretch="1,1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_cinta_1_c_9">
+                               <property name="text">
+                                <string>CINTA 5</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_40">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_31" stretch="3,1">
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QProgressBar" name="pb_cinta_1_c_9">
+                                  <property name="styleSheet">
+                                   <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                                  </property>
+                                  <property name="value">
+                                   <number>100</number>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignCenter</set>
+                                  </property>
+                                  <property name="textVisible">
+                                   <bool>true</bool>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QFrame" name="frame_41">
+                                  <property name="frameShape">
+                                   <enum>QFrame::StyledPanel</enum>
+                                  </property>
+                                  <property name="frameShadow">
+                                   <enum>QFrame::Raised</enum>
+                                  </property>
+                                  <layout class="QHBoxLayout" name="horizontalLayout_32" stretch="3,1">
+                                   <property name="spacing">
+                                    <number>5</number>
+                                   </property>
+                                   <property name="leftMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="topMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="rightMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <property name="bottomMargin">
+                                    <number>0</number>
+                                   </property>
+                                   <item>
+                                    <widget class="QLabel" name="l_vel_cinta_1_c_9">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="text">
+                                      <string>0</string>
+                                     </property>
+                                     <property name="alignment">
+                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item>
+                                    <widget class="QLabel" name="label_13">
+                                     <property name="text">
+                                      <string>m/s</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_42">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_24" stretch="1,1">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="topMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QPushButton" name="btn_editar_cinta_1_c_9">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Editar</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="pushButton_11">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(170, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Parar</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_11">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,3,1">
+                       <item>
+                        <spacer name="horizontalSpacer_5">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>70</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btn_addbelt_1">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>300</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="text">
+                          <string>AGREGAR CINTA</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <spacer name="horizontalSpacer_6">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>70</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_4">
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(25, 25, 25);</string>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,20,3">
+                    <item>
+                     <widget class="QLabel" name="label_3">
+                      <property name="text">
+                       <string>SENSORES</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="sensores_activos_c1">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_7">
+                       <item>
+                        <widget class="QFrame" name="f_sensor_1_c_10">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_33" stretch="1,3">
+                          <item>
+                           <widget class="QFrame" name="frame_43">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_25" stretch="1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_sensor_t_1_c_10">
+                               <property name="text">
+                                <string>SENSOR T 1</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_46">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_6">
+                             <item>
+                              <widget class="QLabel" name="label_4">
+                               <property name="text">
+                                <string>min</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QProgressBar" name="pb_sensor_t_1_c_10">
+                               <property name="styleSheet">
+                                <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                               </property>
+                               <property name="value">
+                                <number>100</number>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                               </property>
+                               <property name="textVisible">
+                                <bool>true</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_5">
+                               <property name="text">
+                                <string>max</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="f_sensor_1_c_11">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_34" stretch="1,3">
+                          <item>
+                           <widget class="QFrame" name="frame_44">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_26" stretch="1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_sensor_t_1_c_11">
+                               <property name="text">
+                                <string>SENSOR T 1</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_47">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_7">
+                             <item>
+                              <widget class="QLabel" name="label_6">
+                               <property name="text">
+                                <string>min</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QProgressBar" name="pb_sensor_t_1_c_11">
+                               <property name="styleSheet">
+                                <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                               </property>
+                               <property name="value">
+                                <number>100</number>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                               </property>
+                               <property name="textVisible">
+                                <bool>true</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_7">
+                               <property name="text">
+                                <string>max</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="f_sensor_ir_1_c_1">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_45" stretch="1,3">
+                          <item>
+                           <widget class="QFrame" name="frame_59">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_33" stretch="1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_sensor_ir_1_c_14">
+                               <property name="text">
+                                <string>SENSOR IR 1</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_62">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_8">
+                             <item>
+                              <widget class="QPushButton" name="btn_nf_sensor_ir_1_c_1">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>NADA</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="btn_objeto_sensor_ir_1_c_1">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(0, 255, 0);
+}
+</string>
+                               </property>
+                               <property name="text">
+                                <string>OBJETO</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="f_sensor_ir_2_c_1">
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_46" stretch="1,3">
+                          <item>
+                           <widget class="QFrame" name="frame_60">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_34" stretch="1">
+                             <item>
+                              <widget class="QLabel" name="l_nombre_sensor_ir_1_c_15">
+                               <property name="text">
+                                <string>SENSOR IR 1</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_63">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_9">
+                             <item>
+                              <widget class="QPushButton" name="btn_nf_sensor_ir_2_c_1">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>NADA</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QPushButton" name="btn_objeto_sensor_ir_1_c_2">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="minimumSize">
+                                <size>
+                                 <width>100</width>
+                                 <height>0</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(0, 255, 0);
+}
+</string>
+                               </property>
+                               <property name="text">
+                                <string>OBJETO</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_12">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0">
+                       <item>
+                        <widget class="QPushButton" name="btn_addsensor_1">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>300</width>
+                           <height>16777215</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(63, 63, 63);</string>
+                         </property>
+                         <property name="text">
+                          <string>AGREGAR SENSOR</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="controlador_2">
+          <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,10">
+           <item>
+            <widget class="QFrame" name="f_superior_c_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(25, 25, 25);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,1,1,2,2,1,2,1">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>5</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>55</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="font">
+                 <font>
+                  <family>Kollektif</family>
+                  <pointsize>9</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Controlador 2</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>55</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_desconectado_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Kollektif</family>
+                  <pointsize>9</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(255, 0, 0);
+color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>DESCONECTADO</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_conectado_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(0, 255, 0);
+color: rgb(255, 255, 255);</string>
+                </property>
+                <property name="text">
+                 <string>CONECTADO</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_10">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_alarma_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Kollektif</family>
+                  <pointsize>9</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+	background-color: rgb(255, 0, 0);	
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                </property>
+                <property name="text">
+                 <string>ALARMA</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_11">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>55</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="f_inferior_c_2">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="3,2">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="frame_6">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(25, 25, 25);</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_11" stretch="1,20,3">
+                 <item>
+                  <widget class="QLabel" name="label_14">
+                   <property name="text">
+                    <string>CINTAS</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_7">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_12">
+                    <item>
+                     <widget class="QFrame" name="f_cinta_1_c_10">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(63, 63, 63);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_35" stretch="3,1">
+                       <item>
+                        <widget class="QFrame" name="frame_45">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_27" stretch="1,1">
+                          <item>
+                           <widget class="QLabel" name="l_nombre_cinta_1_c_10">
+                            <property name="text">
+                             <string>CINTA 1</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_48">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_36" stretch="3,1">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QProgressBar" name="pb_cinta_1_c_10">
+                               <property name="styleSheet">
+                                <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                               </property>
+                               <property name="value">
+                                <number>100</number>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                               </property>
+                               <property name="textVisible">
+                                <bool>true</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_49">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_37" stretch="3,1">
+                                <property name="spacing">
+                                 <number>5</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QLabel" name="l_vel_cinta_1_c_10">
+                                  <property name="sizePolicy">
+                                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                   </sizepolicy>
+                                  </property>
+                                  <property name="text">
+                                   <string>0</string>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QLabel" name="label_15">
+                                  <property name="text">
+                                   <string>m/s</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_50">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_28" stretch="1,1">
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btn_editar_cinta_1_c_10">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>Editar</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="pushButton_12">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(170, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>Parar</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="f_cinta_1_c_11">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(63, 63, 63);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_38" stretch="3,1">
+                       <item>
+                        <widget class="QFrame" name="frame_51">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_29" stretch="1,1">
+                          <item>
+                           <widget class="QLabel" name="l_nombre_cinta_1_c_11">
+                            <property name="text">
+                             <string>CINTA 2</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_52">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="3,1">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QProgressBar" name="pb_cinta_1_c_11">
+                               <property name="styleSheet">
+                                <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                               </property>
+                               <property name="value">
+                                <number>100</number>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                               </property>
+                               <property name="textVisible">
+                                <bool>true</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_53">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_40" stretch="3,1">
+                                <property name="spacing">
+                                 <number>5</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QLabel" name="l_vel_cinta_1_c_11">
+                                  <property name="sizePolicy">
+                                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                   </sizepolicy>
+                                  </property>
+                                  <property name="text">
+                                   <string>0</string>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QLabel" name="label_16">
+                                  <property name="text">
+                                   <string>m/s</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_54">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_30" stretch="1,1">
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btn_editar_cinta_1_c_11">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>Editar</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="pushButton_13">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(170, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>Parar</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="f_cinta_1_c_12">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(63, 63, 63);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_41" stretch="3,1">
+                       <item>
+                        <widget class="QFrame" name="frame_55">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_31" stretch="1,1">
+                          <item>
+                           <widget class="QLabel" name="l_nombre_cinta_1_c_12">
+                            <property name="text">
+                             <string>CINTA 3</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QFrame" name="frame_56">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_42" stretch="3,1">
+                             <property name="leftMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="rightMargin">
+                              <number>0</number>
+                             </property>
+                             <property name="bottomMargin">
+                              <number>0</number>
+                             </property>
+                             <item>
+                              <widget class="QProgressBar" name="pb_cinta_1_c_12">
+                               <property name="styleSheet">
+                                <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                               </property>
+                               <property name="value">
+                                <number>100</number>
+                               </property>
+                               <property name="alignment">
+                                <set>Qt::AlignCenter</set>
+                               </property>
+                               <property name="textVisible">
+                                <bool>true</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QFrame" name="frame_57">
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QHBoxLayout" name="horizontalLayout_43" stretch="3,1">
+                                <property name="spacing">
+                                 <number>5</number>
+                                </property>
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="rightMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <widget class="QLabel" name="l_vel_cinta_1_c_12">
+                                  <property name="sizePolicy">
+                                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                   </sizepolicy>
+                                  </property>
+                                  <property name="text">
+                                   <string>0</string>
+                                  </property>
+                                  <property name="alignment">
+                                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                  </property>
+                                 </widget>
+                                </item>
+                                <item>
+                                 <widget class="QLabel" name="label_17">
+                                  <property name="text">
+                                   <string>m/s</string>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_58">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_32" stretch="1,1">
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QPushButton" name="btn_editar_cinta_1_c_12">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>Editar</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="pushButton_14">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(170, 0, 0);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>Parar</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_13">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="1,3,1">
+                    <item>
+                     <spacer name="horizontalSpacer_12">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btn_addbelt_2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>300</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(63, 63, 63);</string>
+                      </property>
+                      <property name="text">
+                       <string>AGREGAR CINTA</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_13">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>70</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame_8">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(25, 25, 25);</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_13" stretch="1,20,3">
+                 <item>
+                  <widget class="QLabel" name="label_20">
+                   <property name="text">
+                    <string>SENSORES</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="sensores_activos_c1_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_14">
+                    <item>
+                     <widget class="QFrame" name="f_sensor_1_c_12">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(63, 63, 63);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_52" stretch="1,3">
+                       <item>
+                        <widget class="QFrame" name="frame_71">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_39" stretch="1">
+                          <item>
+                           <widget class="QLabel" name="l_nombre_sensor_t_1_c_12">
+                            <property name="text">
+                             <string>SENSOR T 1</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_72">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QHBoxLayout" name="horizontalLayout_11">
+                          <item>
+                           <widget class="QLabel" name="label_21">
+                            <property name="text">
+                             <string>min</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QProgressBar" name="pb_sensor_t_1_c_12">
+                            <property name="styleSheet">
+                             <string notr="true">QProgressBar::chunk {
+    
+	background-color: rgb(39, 39, 39);
+}</string>
+                            </property>
+                            <property name="value">
+                             <number>100</number>
+                            </property>
+                            <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                            </property>
+                            <property name="textVisible">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_22">
+                            <property name="text">
+                             <string>max</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="f_sensor_ir_1_c_2">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(63, 63, 63);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_54" stretch="1,3">
+                       <item>
+                        <widget class="QFrame" name="frame_75">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_41" stretch="1">
+                          <item>
+                           <widget class="QLabel" name="l_nombre_sensor_ir_1_c_16">
+                            <property name="text">
+                             <string>SENSOR IR 1</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_76">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_42">
+                          <item>
+                           <widget class="QPushButton" name="btn_nf_sensor_ir_1_c_2">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>NADA</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="btn_objeto_sensor_ir_1_c_3">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(0, 255, 0);
+}
+</string>
+                            </property>
+                            <property name="text">
+                             <string>OBJETO</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="f_sensor_ir_2_c_2">
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(63, 63, 63);</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_55" stretch="1,3">
+                       <item>
+                        <widget class="QFrame" name="frame_77">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_43" stretch="1">
+                          <item>
+                           <widget class="QLabel" name="l_nombre_sensor_ir_1_c_17">
+                            <property name="text">
+                             <string>SENSOR IR 1</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_78">
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_44">
+                          <item>
+                           <widget class="QPushButton" name="btn_nf_sensor_ir_2_c_2">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(39, 39, 39);
+}
+
+QPushButton:hover {
+	background-color: rgb(99, 99, 99);
+}</string>
+                            </property>
+                            <property name="text">
+                             <string>NADA</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QPushButton" name="btn_objeto_sensor_ir_1_c_4">
+                            <property name="sizePolicy">
+                             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                             </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                             <size>
+                              <width>100</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                            <property name="styleSheet">
+                             <string notr="true">QPushButton {
+	background-color: rgb(0, 255, 0);
+}
+</string>
+                            </property>
+                            <property name="text">
+                             <string>OBJETO</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_14">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="0">
+                    <item>
+                     <widget class="QPushButton" name="btn_addsensor_2">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>300</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(63, 63, 63);</string>
+                      </property>
+                      <property name="text">
+                       <string>AGREGAR SENSOR</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
