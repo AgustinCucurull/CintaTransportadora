@@ -7,16 +7,13 @@
 class SensorIR : public SensorBase {
   ~SensorIR() {}
   ~SensorIR() = default;
-  
-  void UpdateData() override;
-  
+
   Data GetData() const override;
   Port GetPort() const override;
   std::string GetName() const override;
   
   void SetPort(Port port_) override;
   void SetData(Data data_) override;
-  void SetControlBoard(std::shared_ptr<IControlBoard> board_) override;
   void SetName(std::string& name_) override;
   void SetLimits(std::unique_ptr<IValueLimits> &&limits_) override;
 

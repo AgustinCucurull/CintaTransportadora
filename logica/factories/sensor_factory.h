@@ -11,11 +11,9 @@ public:
   ~SensorFactory() = default;
   // Sensors with limits (viz. temperature, preassure)
   virtual ISensor *CreateSensor(std::string &name, Port port,
-                                std::shared_ptr<IControlBoard> board,
                                 float lower, float upper) = 0;
   // Digital Sensors (IR)
-  virtual ISensor *CreateSensor(std::string &name, Port port,
-                                std::shared_ptr<IControlBoard> board) = 0;
+  virtual ISensor *CreateSensor(std::string &name, Port port) = 0;
 };
 
 #endif

@@ -8,7 +8,7 @@ StateType StateRunning::GetType() const {
 }
 
 // -----------------------------------------------------------------------------
-// State Operationsn
+// State Operations
 
 float StateRunning::CalculateSpeed() {
   if (this->auxiliary_speed < this->context->GetObjectiveSpeed()) {

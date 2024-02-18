@@ -15,7 +15,6 @@ protected:
   Data data;
   
   std::string name;
-  std::shared_ptr<IControlBoard> board;
   std::unique_ptr<IValueLimits> limits;
 };
 

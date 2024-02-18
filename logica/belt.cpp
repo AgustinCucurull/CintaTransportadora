@@ -20,7 +20,7 @@ void Belt::SetPort(Port port_) {
   this->port = port_;
 }
 
-void Belt::SetName(std::string name_) {
+void Belt::SetName(std::string &name_) {
   this->name = name_;
 }
 

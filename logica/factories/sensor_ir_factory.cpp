@@ -5,7 +5,6 @@
 #include "sensor_ir_factory.h"
 
 ISensor *SensorIRFactory::CreateSensor(std::string &name, Port port,
-                                       std::shared_ptr<IControlBoard> board,
                                        float lower, float upper) {
   std::cerr
       << "Error: Tried to create a temperature sensor with no bound values."
@@ -13,12 +12,10 @@ ISensor *SensorIRFactory::CreateSensor(std::string &name, Port port,
   return nullptr;
 }
 
-ISensor *SensorIRFactory::CreateSensor(std::string &name, Port port,
-                                       std::shared_ptr<IControlBoard> board) {
+ISensor *SensorIRFactory::CreateSensor(std::string &name, Port port) {
   ISensor *new_sensor = new SensorIR();
   new_sensor->SetName(name);
   new_sensor->SetPort(port);
-  new_sensor->SetControlBoard(board);
   new_sensor->SetLimits(nullptr);
   
   return new_sensor;

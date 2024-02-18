@@ -2,12 +2,6 @@
 #include "sensor_ir.h"
 
 // -----------------------------------------------------------------------------
-
-void SensorIR::UpdateData() {
-  this->data = this->board->GetData(this->port);
-}
-
-// -----------------------------------------------------------------------------
 // Getters
 
 Data SensorIR::GetData() const {
@@ -27,10 +21,6 @@ void SensorIR::SetPort(Port port_) {
 
 void SensorIR::SetData(Data data_) {
   this->data = data_;
-}
-
-void SensorIR::SetControlBoard(std::shared_ptr<IControlBoard> board_) {
-  this->board = std::make_shared<IControlBoard>(board_);
 }
 
 void SensorIR::SetName(std::string &name_) {

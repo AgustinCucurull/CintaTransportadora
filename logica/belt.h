@@ -19,7 +19,6 @@ protected:
   float current_speed = 0;
 
   bool alarm_active = false;
-  bool belt_running = false;
   std::unique_ptr<IState> state;
 
 public:
@@ -27,7 +26,7 @@ public:
   ~Belt() = default;
 
   void SetPort(Port port_);
-  void SetName(std::string name_);
+  void SetName(std::string &name_);
   void SetLength(float length_);
   void SetObjectiveSpeed(float speed_);
   void SetTime(float time_);

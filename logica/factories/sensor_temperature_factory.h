@@ -7,10 +7,8 @@ class SensorTemperatureFactory : public SensorFactory {
 public:
   ~SensorTemperatureFactory() = default;
   ISensor *CreateSensor(std::string &name, Port port,
-                        std::shared_ptr<IControlBoard> board, float lower,
-                        float upper) override;
-  ISensor *CreateSensor(std::string &name, Port port,
-                        std::shared_ptr<IControlBoard> board) override;
+                        float lower, float upper) override;
+  ISensor *CreateSensor(std::string &name, Port port) override;
 };
 
 #endif

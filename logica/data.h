@@ -13,7 +13,7 @@ private:
   Value value;
   Port port;
 
-public:
+public: 
   Data() {}
   Data(Value v, Port p) : value(v), port(p) {}
   ~Data() = default;
