@@ -5,7 +5,8 @@
 
 class ControlBoardArduino : public ControlBoardBase {
 public:
-  ControlBoardArduino() {}
+  ControlBoardArduino(std::string &name_, uint32_t vendor, uint32_t product)
+                      : ControlBoardBase(name_, vendor, product) {}
   ~ControlBoardArduino() = default;
 
   void UpdateData() override;
