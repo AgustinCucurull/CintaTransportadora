@@ -16,6 +16,8 @@ protected:
   
   std::string name;
   std::unique_ptr<IValueLimits> limits;
+public:
+  SensorBase(std::string &name_, Port port_) : name(name_), port(port_) {}
 };
 
 #endif

@@ -15,10 +15,11 @@ private:
 
   static BlackBoard *instance;
   std::shared_ptr<IControlBoard> control_board;
+  //std::vector<std::shared_ptr<IControlBoard>> control_boards;
   bool alarm_active = false;
 
-  std::vector<ISensor*> sensors;
-  std::vector<Belt*> belts;
+  std::vector<std::unique_ptr<ISensor>> sensors;
+  std::vector<std::unique_ptr<Belt>> belts;
 
 public:
   // Not clonable
@@ -29,36 +30,31 @@ public:
 
   // Delete instance and vectors upon destruction
   ~BlackBoard() {
-    if (instance != nullptr) {
-      for (auto &sensor : this->sensors) {
-        delete sensor;
-        sensor = nullptr;
-      }
-      this->sensors.clear();
-
-      for (auto &belt : this->belts) {
-        delete belt;
-        belt = nullptr;
-      }
-      this->belts.clear();
-
-      delete instance;
-      instance = nullptr;
-    }
+    delete instance;
+    instance = nullptr;
   }
 
   static BlackBoard *GetInstance();
   void SetControlBoard(std::shared_ptr<IControlBoard> board);
 
+  //std::shared_ptr<IControlBoard> GetBoard(std::string &name);
   void UpdateSensors();
   void UpdateBelts();
-
+  
   Data ReadSensor(std::string &name);
   Data ReadPort(Port port);
   void WritePort(Port port, Data data);
 
-  void AddSensor(ISensor* &sensor);
-  void AddBelt(Belt* &belt);
+  void AddBoard(std::shared_ptr<IControlBoard> board);
+  void AddSensor(std::unique_ptr<ISensor> sensor);
+  void AddBelt(std::unique_ptr<Belt> belt);
+
+  void EditBoard(std::string &name, uint32_t id_vendor, uint32_t id_product);
+  void EditBoard(std::string &name, std::string &new_name, uint32_t id_vendor, uint32_t id_product);
+  void EditBelt(std::string &name, Port port, float length, float speed);
+  void EditBelt(std::string &name, std::string &new_name, Port port, float length, float speed);
+  void EditSensor(std::string &name, Port port, float lower_limit, float upper_limit);
+  void EditSensor(std::string &name, std::string &new_name, Port port, float lower_limit, float upper_limit);
 
   void RemoveSensor(std::string &name);
   void RemoveBelt(std::string &name);

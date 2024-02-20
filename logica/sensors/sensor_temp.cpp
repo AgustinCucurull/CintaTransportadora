@@ -31,7 +31,7 @@ void SensorTemperature::SetName(std::string &name_) {
   this->name = name_;
 }
 
-void SensorTemperature::SetLimits(std::unique_ptr<IValueLimits> &&limits_) {
+void SensorTemperature::SetLimits(std::unique_ptr<IValueLimits>&& limits_) {
   this->limits = std::move(limits_);
 }
 

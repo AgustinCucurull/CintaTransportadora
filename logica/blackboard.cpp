@@ -52,8 +52,9 @@ void BlackBoard::UpdateBelts() {
 // * the sensors' names outside this class in the GUI, and there's a 1:1
 // * correspondence between them). However, we may want to consider a way to
 // * handle the cases when "name" is not contained in the vector.
+// * TODO (ESuez): This should be implemented with std::unordered_map for performance reasons
 Data BlackBoard::ReadSensor(std::string &name) {
-  for (auto current_sensor : this->sensors) {
+  for (auto& current_sensor : this->sensors) {
     if (current_sensor->GetName() == name) {
       return current_sensor->GetData();
     }
@@ -65,7 +66,7 @@ Data BlackBoard::ReadPort(Port port) {
 }
 
 // * Write data to the control board
-// * (i.e. the value that controls the speeds of the belts')
+// * (i.e. the value that controls the speeds of the belts)
 void BlackBoard::WritePort(Port port, Data data) {
   this->control_board->WriteToPort(data, port);
 }
@@ -73,31 +74,112 @@ void BlackBoard::WritePort(Port port, Data data) {
 // -----------------------------------------------------------------------------
 // Sensor and belt management
 
+// void BlackBoard::AddBoard(std::shared_ptr<IControlBoard> board) {
+//   this->control_boards.emplace_back(board)
+// }
+
 // * Add sensor to the vector.
-void BlackBoard::AddSensor(ISensor* &sensor) {
-  this->sensors.push_back(sensor);
+void BlackBoard::AddSensor(std::unique_ptr<ISensor> sensor) {
+  this->sensors.emplace_back(std::move(sensor));
 }
+
+// void BlackBoard::AddSensor(std::unique_ptr<ISensor>&& sensor) {
+//   this->sensors.push_back(sensor);
+// }
+
+
+// * Add belt to the vector.
+void BlackBoard::AddBelt(std::unique_ptr<Belt> belt) {
+  this->belts.emplace_back(std::move(belt));
+}
+
+void BlackBoard::EditBoard(std::string &name, uint32_t id_vendor, uint32_t id_product) {
+  // for (auto& control_board : this->control_boards) {
+     if (control_board->GetName() == name) {
+       control_board->SetIdVendor(id_vendor);
+       control_board->SetIdProduct(id_product);
+       return;
+     }
+  // }
+}
+
+void BlackBoard::EditBoard(std::string &name, std::string &new_name, uint32_t id_vendor, uint32_t id_product) {
+  // for (auto& controlboard : this->control_boards) {
+    if (control_board->GetName() == name) {
+      control_board->SetIdVendor(id_vendor);
+      control_board->SetIdProduct(id_product);
+      control_board->SetName(new_name);
+      
+      return;
+     }
+  // }
+}
+
+void BlackBoard::EditBelt(std::string &name, Port port, float length, float speed) {
+  for (auto& belt : this->belts) {
+    if (belt->GetName() == name) {
+      belt->SetPort(port);
+      belt->SetLength(length);
+      belt->SetObjectiveSpeed(speed);
+    }
+  }
+}
+
+void BlackBoard::EditBelt(std::string &name, std::string &new_name, Port port, float length, float speed) {
+  for (auto& belt : this->belts) {
+    if (belt->GetName() == name) {
+      belt->SetPort(port);
+      belt->SetLength(length);
+      belt->SetObjectiveSpeed(speed);
+      belt->SetName(new_name);
+
+      return;
+    }
+  }
+}
+
+void BlackBoard::EditSensor(std::string &name, Port port, float lower_limit, float upper_limit) {
+  for (auto& sensor : this->sensors) {
+    if (sensor->GetName() == name) {
+      sensor->SetPort(port);
+      sensor->SetLimits(std::make_unique<IValueLimits>(lower_limit, upper_limit));
+
+      return;
+    }
+  }
+}
+
+void BlackBoard::EditSensor(std::string &name, std::string &new_name, Port port, float lower_limit, float upper_limit) {
+  for (auto& sensor : this->sensors) {
+    if (sensor->GetName() == name) {
+      sensor->SetPort(port);
+      sensor->SetLimits(std::make_unique<IValueLimits>(lower_limit, upper_limit));
+      sensor->SetName(new_name);
+
+      return;
+    }
+  }
+}
+
+// void BlackBoard::AddBelt(std::unique_ptr<Belt>&& belt) {
+//   this->belts.push_back(belt);
+// }
 
 // * Remove sensor from the vector if the field "name" matches with the internal
 // * name.
 void BlackBoard::RemoveSensor(std::string &name) {
   this->sensors.erase(std::remove_if(this->sensors.begin(), this->sensors.end(),
-                                     [&](const ISensor* &sensor) {
+                                     [&](const std::unique_ptr<ISensor>& sensor) {
                                        return sensor->GetName() == name;
                                      }),
                       this->sensors.end());
-}
-
-// * Add belt to the vector.
-void BlackBoard::AddBelt(Belt* &belt) {
-  this->belts.push_back(belt);
 }
 
 // * Remove belt from the vector if the field "name" matches with the internal
 // * name.
 void BlackBoard::RemoveBelt(std::string &name) {
   this->belts.erase(std::remove_if(this->belts.begin(), this->belts.end(),
-                                     [&](const Belt* &belt) {
+                                     [&](const std::unique_ptr<Belt>& belt) {
                                        return belt->GetName() == name;
                                      }),
                       this->belts.end());

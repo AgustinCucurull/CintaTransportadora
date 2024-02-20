@@ -7,7 +7,7 @@
 class Port {
 private:
   std::string code; // Analog: "A1", Digital: "1", etc.
-  uint8_t address; // 0x45, registers, etc.
+  uint32_t address; // 0x45, registers, etc.
 
 public:
   Port() {}

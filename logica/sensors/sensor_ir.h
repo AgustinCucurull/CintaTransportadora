@@ -1,11 +1,13 @@
 #ifndef __SENSOR_IR__
 #define __SENSOR_IR__
 
+#include <string>
 #include "sensor_base.h"
 #include "../data.h"
 
 class SensorIR : public SensorBase {
-  ~SensorIR() {}
+public:
+  SensorIR(std::string &name_, Port port_) : SensorBase(name_, port_) {}
   ~SensorIR() = default;
 
   Data GetData() const override;

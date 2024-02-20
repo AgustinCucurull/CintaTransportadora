@@ -13,7 +13,7 @@ class SensorTemperature : public SensorBase {
   void SetPort(Port port_) override;
   void SetData(Data data_) override;
   void SetName(std::string& name_) override;
-  void SetLimits(std::unique_ptr<IValueLimits> &&limits_) override;
+  void SetLimits(std::unique_ptr<IValueLimits>&& limits_) override;
 
   bool IsValidValue() const override;
 };
