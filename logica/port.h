@@ -11,7 +11,7 @@ private:
 
 public:
   Port() {}
-  Port(std::string code_, uint8_t address_) : code(code_), address(address_) {}
+  Port(const std::string &code_, uint32_t address_) : code(code_), address(address_) {}
   ~Port() = default;
 
   bool operator==(const Port& other) const {

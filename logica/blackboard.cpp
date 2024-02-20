@@ -1,5 +1,11 @@
 #include <algorithm>
 #include "blackboard.h"
+#include "./value_limits/temperature_limits.h"
+#include "./board_type.h"
+#include "./controlboard_arduino.h"
+
+// BlackBoard* BlackBoard::instance = nullptr;
+BlackBoard* BlackBoard::instance = nullptr;
 
 // -----------------------------------------------------------------------------
 // Getters
@@ -18,7 +24,11 @@ BlackBoard *BlackBoard::GetInstance() {
 
 // * Set the control board to be used with the system (Arduino, PLC, etc.)
 void BlackBoard::SetControlBoard(std::shared_ptr<IControlBoard> board) {
-  this->control_board = std::make_shared<IControlBoard>(board);
+  switch(board->GetType()) {
+  case BoardType::ARDUINO:
+    this->control_board = std::make_shared<ControlBoardArduino>(board);
+    break;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -59,6 +69,8 @@ Data BlackBoard::ReadSensor(std::string &name) {
       return current_sensor->GetData();
     }
   }
+
+  return Data(1u, Port());
 }
 
 Data BlackBoard::ReadPort(Port port) {
@@ -142,7 +154,13 @@ void BlackBoard::EditSensor(std::string &name, Port port, float lower_limit, flo
   for (auto& sensor : this->sensors) {
     if (sensor->GetName() == name) {
       sensor->SetPort(port);
-      sensor->SetLimits(std::make_unique<IValueLimits>(lower_limit, upper_limit));
+      switch (sensor->GetType()) {
+      case SensorType::IR:
+        return;
+      case SensorType::TEMPERATURE:
+        sensor->SetLimits(std::make_unique<TemperatureLimits>(lower_limit, upper_limit));
+        break;
+      }
 
       return;
     }
@@ -153,8 +171,15 @@ void BlackBoard::EditSensor(std::string &name, std::string &new_name, Port port,
   for (auto& sensor : this->sensors) {
     if (sensor->GetName() == name) {
       sensor->SetPort(port);
-      sensor->SetLimits(std::make_unique<IValueLimits>(lower_limit, upper_limit));
       sensor->SetName(new_name);
+
+      switch (sensor->GetType()) {
+      case SensorType::IR:
+        break;
+      case SensorType::TEMPERATURE:
+        sensor->SetLimits(std::make_unique<TemperatureLimits>(lower_limit, upper_limit));
+        break;
+      }
 
       return;
     }

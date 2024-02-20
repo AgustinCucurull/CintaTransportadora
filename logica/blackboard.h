@@ -28,7 +28,7 @@ public:
   // Not assignable
   void operator=(const BlackBoard &) = delete;
 
-  // Delete instance and vectors upon destruction
+  // Delete instance
   ~BlackBoard() {
     delete instance;
     instance = nullptr;
@@ -59,8 +59,5 @@ public:
   void RemoveSensor(std::string &name);
   void RemoveBelt(std::string &name);
 };
-
-// Definition of the static member variable outside the class
-BlackBoard* BlackBoard::instance = nullptr;
 
 #endif

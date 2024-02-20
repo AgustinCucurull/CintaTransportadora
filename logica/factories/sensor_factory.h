@@ -9,9 +9,11 @@
 class SensorFactory {
 public:
   ~SensorFactory() = default;
+  
   // Sensors with limits (viz. temperature, preassure)
   virtual ISensor *CreateSensor(std::string &name, Port port,
                                 float lower, float upper) = 0;
+
   // Digital Sensors (IR)
   virtual ISensor *CreateSensor(std::string &name, Port port) = 0;
 };

@@ -5,6 +5,9 @@
 #include "./sensors/sensor_type.h"
 #include "./sensors/sensor_temp.h"
 #include "./sensors/sensor_ir.h"
+#include "./factories/sensor_factory.h"
+#include "./factories/sensor_temperature_factory.h"
+#include "./factories/sensor_ir_factory.h"
 
 // -----------------------------------------------------------------------------
 
@@ -27,16 +30,19 @@ void SystemManager::AddBeltToSystem(std::string &name, Port port, float length, 
 
 void SystemManager::AddSensorToSystem(std::string &name, Port port, float lower_limit, float upper_limit, SensorType type) {
   std::unique_ptr<ISensor> sensor;
+  SensorFactory *factory;
 
   switch(type) {
   case SensorType::TEMPERATURE:
-    sensor = std::make_unique<SensorTemperature>(name, port, lower_limit, upper_limit);
+    factory = new SensorTemperatureFactory();
+    sensor.reset(factory->CreateSensor(name, port, lower_limit, upper_limit)); // Transfer ownership using std::move
     break;
   // case SensorType::PRESSURE:
   //   sensor = std::make_unique<SensorPressure>(name, port, lower_limit, upper_limit);
   //   break;
   }
 
+  delete factory;
   blackboard_instance->AddSensor(std::move(sensor));
 }
 

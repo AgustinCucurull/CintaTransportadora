@@ -1,7 +1,5 @@
-#include "../sensors/sensor_ir.h"
-#include "sensor_ir_factory.h"
 #include <iostream>
-
+#include "../sensors/sensor_ir.h"
 #include "sensor_ir_factory.h"
 
 ISensor *SensorIRFactory::CreateSensor(std::string &name, Port port,

@@ -15,10 +15,24 @@ Data ControlBoardArduino::GetData(Port port) const {
       return data; // ensure port is valid before calling this
     }
   }
+
+  // Silence compile error
+  return Data(1u, Port());
 }
 
 std::string ControlBoardArduino::GetName() const {
   return this->name;
+}
+
+BoardType ControlBoardArduino::GetType() const {
+  return this->type;
+}
+
+uint32_t ControlBoardArduino::GetIdVendor() const {
+  return this->id_vendor;
+}
+uint32_t ControlBoardArduino::GetIdProduct() const {
+  return this->id_product;
 }
 
 // -----------------------------------------------------------------------------

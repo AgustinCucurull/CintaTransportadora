@@ -4,6 +4,7 @@
 #include <string>
 #include "port.h"
 #include "blackboard.h"
+#include "./sensors/sensor_type.h"
 
 class SystemManager {
 private:
@@ -30,9 +31,6 @@ public:
   void RemoveBoardFromSystem(std::string &name);
   void RemoveSensorFromSystem(std::string &name);
   void RemoveBeltFromSystem(std::string &name);
-
-  // editar cintas
 };
-
 
 #endif

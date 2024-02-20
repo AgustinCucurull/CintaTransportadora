@@ -5,10 +5,12 @@
 
 class SensorIRFactory : public SensorFactory {
 public:
+  SensorIRFactory() {}
   ~SensorIRFactory() = default;
-  ISensor *CreateSensor(std::string &name, Port port,
+  
+  ISensor* CreateSensor(std::string &name, Port port,
                         float lower, float upper) override;
-  ISensor *CreateSensor(std::string &name, Port port) override;
+  ISensor* CreateSensor(std::string &name, Port port) override;
 };
 
 #endif

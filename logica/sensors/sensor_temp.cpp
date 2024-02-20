@@ -12,6 +12,10 @@ Port SensorTemperature::GetPort() const {
   return this->port;
 }
 
+SensorType SensorTemperature::GetType() const {
+  return this->type;
+}
+
 std::string SensorTemperature::GetName() const {
   return this->name;
 }
@@ -25,6 +29,10 @@ void SensorTemperature::SetPort(Port port_) {
 
 void SensorTemperature::SetData(Data data_) {
   this->data = data_;
+}
+
+void SensorTemperature::SetType(SensorType type_) {
+  this->type = type_;
 }
 
 void SensorTemperature::SetName(std::string &name_) {

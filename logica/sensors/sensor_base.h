@@ -11,13 +11,14 @@
 
 class SensorBase : public ISensor {
 protected:
+  std::string name;
   Port port;
   Data data;
-  
-  std::string name;
+  SensorType type;
   std::unique_ptr<IValueLimits> limits;
 public:
-  SensorBase(std::string &name_, Port port_) : name(name_), port(port_) {}
+  SensorBase(const std::string &name_, Port port_) : name(name_), port(port_) {}
+  SensorBase() {}
 };
 
 #endif
