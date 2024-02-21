@@ -2,6 +2,8 @@
 #define ADDCONTROLLER_H
 
 #include <QDialog>
+#include <string>
+#include <QMessageBox>
 
 namespace Ui {
 class addcontroller;
@@ -16,7 +18,7 @@ public:
     ~addcontroller();
 
 signals:
-    AgregarControlador();
+    AgregarControlador(std::string nombre, int idv, int idp);
 
 private slots:
     void on_nombre_nuevo_controlador_returnPressed();

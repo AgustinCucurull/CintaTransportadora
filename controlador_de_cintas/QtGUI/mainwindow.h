@@ -4,11 +4,14 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QMessageBox>
+#include <string>
 
 #include "conexion.h"
 #include "addbelt.h"
 #include "addcontroller.h"
 #include "addsensor.h"
+#include "data.h"
+#include "port.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -41,17 +44,28 @@ private slots:
 
     void ActivarSegundoControlador();
 
-
     void on_btn_c_1_clicked();
 
     void on_btn_c_2_clicked();
 
+    void AgregarSensorT(std::string pin, std::string nombre);
+
+    void AgregarSensorIR(std::string pin, std::string nombre);
+
+    void AgregarCinta(std::string nombre, int largo);
+
+    void GestorDeVisualizacionDeCintas(std::string nombre);
 private:
     Ui::MainWindow *ui;
     conexion * conex1;
     conexion * conex2;
     QTimer * clock_principal;
     addcontroller * add_controller;
+    addsensor * add_sensor;
+    addbelt * add_belt;
+    int contador_de_cintas;
+    int contador_de_T;
+    int contador_de_IR;
 
 };
 #endif // MAINWINDOW_H

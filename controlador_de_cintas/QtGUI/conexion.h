@@ -1,26 +1,34 @@
 #ifndef CONEXION_H
 #define CONEXION_H
 
-#include <QObject>
 #include <QDebug>
 #include <QSerialPort>
 #include <QSerialPortInfo>
 #include <QTimer>
 #include <QString>
+#include <string>
+#include "data.h"
+#include "queue.h"
 
 class conexion : public QSerialPort
 {
-
 public:
     conexion(QString nombre);
     void BuscarYConectar(int idv, int idp);
     bool GetEstadoDeConexion();
+    void enviarEncenderT(std::string valor);
+    void enviarEncenderI(std::string valor);
+    void enviarApagarT(std::string valor);
+    void enviarApagarI(std::string valor);
+
 
 private slots:
     void timeoutConexion();
     void datosRecibidos();
 
+
 private:
+    queue q;
     QString id;
     QSerialPort *arduino;
     QString arduino_port_name;
@@ -34,3 +42,4 @@ private:
 };
 
 #endif // CONEXION_H
+

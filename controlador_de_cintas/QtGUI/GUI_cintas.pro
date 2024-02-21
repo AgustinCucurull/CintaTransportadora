@@ -15,15 +15,24 @@ SOURCES += \
     addcontroller.cpp \
     addsensor.cpp \
     conexion.cpp \
+    data.cpp \
+    interprete.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    port.cpp \
+    queue.cpp
 
 HEADERS += \
     addbelt.h \
     addcontroller.h \
     addsensor.h \
     conexion.h \
-    mainwindow.h
+    data.h \
+    interprete.h \
+    mainwindow.h \
+    port.h \
+    queue.h \
+    system_manager.h
 
 FORMS += \
     addbelt.ui \
@@ -35,3 +44,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    imagenes.qrc

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>636</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -189,6 +189,21 @@ QPushButton:hover {
          </property>
          <widget class="QWidget" name="controlador_1">
           <layout class="QVBoxLayout" name="verticalLayout_35">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="frame">
              <property name="frameShape">
@@ -198,6 +213,18 @@ QPushButton:hover {
               <enum>QFrame::Raised</enum>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,10">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QFrame" name="f_superior_c_1">
                 <property name="styleSheet">
@@ -427,7 +454,13 @@ QPushButton:hover {
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_6">
                        <item>
-                        <widget class="QFrame" name="f_cinta_1_c_5">
+                        <widget class="QFrame" name="f_c_1_cinta_1">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -437,7 +470,7 @@ QPushButton:hover {
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="3,1">
+                         <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="7,4,1">
                           <item>
                            <widget class="QFrame" name="frame_23">
                             <property name="frameShape">
@@ -448,7 +481,7 @@ QPushButton:hover {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_15" stretch="1,1">
                              <item>
-                              <widget class="QLabel" name="l_nombre_cinta_1_c_5">
+                              <widget class="QLabel" name="c_1_nombre_cinta_1">
                                <property name="text">
                                 <string>CINTA 1</string>
                                </property>
@@ -540,7 +573,7 @@ QPushButton:hover {
                                    <item>
                                     <widget class="QLabel" name="label_9">
                                      <property name="text">
-                                      <string>m/s</string>
+                                      <string>cm/s</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -633,11 +666,52 @@ QPushButton:hover {
                             </layout>
                            </widget>
                           </item>
+                          <item>
+                           <widget class="QFrame" name="frame_9">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_14">
+                             <item>
+                              <widget class="QPushButton" name="pushButton">
+                               <property name="sizePolicy">
+                                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                                 <horstretch>0</horstretch>
+                                 <verstretch>0</verstretch>
+                                </sizepolicy>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="imagenes.qrc">
+                                 <normaloff>:/resources/images/eliminar.png</normaloff>:/resources/images/eliminar.png</iconset>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
                          </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="f_cinta_1_c_6">
+                        <widget class="QFrame" name="f_c_1_cinta_2">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -647,7 +721,7 @@ QPushButton:hover {
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="3,1">
+                         <layout class="QHBoxLayout" name="horizontalLayout_21" stretch="7,4,1">
                           <item>
                            <widget class="QFrame" name="frame_27">
                             <property name="frameShape">
@@ -658,7 +732,7 @@ QPushButton:hover {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_17" stretch="1,1">
                              <item>
-                              <widget class="QLabel" name="l_nombre_cinta_1_c_6">
+                              <widget class="QLabel" name="c_1_nombre_cinta_2">
                                <property name="text">
                                 <string>CINTA 2</string>
                                </property>
@@ -750,7 +824,7 @@ QPushButton:hover {
                                    <item>
                                     <widget class="QLabel" name="label_10">
                                      <property name="text">
-                                      <string>m/s</string>
+                                      <string>cm/s</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -843,11 +917,46 @@ QPushButton:hover {
                             </layout>
                            </widget>
                           </item>
+                          <item>
+                           <widget class="QFrame" name="frame_10">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_15">
+                             <item>
+                              <widget class="QPushButton" name="pushButton_2">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="imagenes.qrc">
+                                 <normaloff>:/resources/images/eliminar.png</normaloff>:/resources/images/eliminar.png</iconset>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
                          </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="f_cinta_1_c_7">
+                        <widget class="QFrame" name="f_c_1_cinta_3">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -857,7 +966,7 @@ QPushButton:hover {
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="3,1">
+                         <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="7,4,1">
                           <item>
                            <widget class="QFrame" name="frame_31">
                             <property name="frameShape">
@@ -868,7 +977,7 @@ QPushButton:hover {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_19" stretch="1,1">
                              <item>
-                              <widget class="QLabel" name="l_nombre_cinta_1_c_7">
+                              <widget class="QLabel" name="c_1_nombre_cinta_3">
                                <property name="text">
                                 <string>CINTA 3</string>
                                </property>
@@ -960,7 +1069,7 @@ QPushButton:hover {
                                    <item>
                                     <widget class="QLabel" name="label_11">
                                      <property name="text">
-                                      <string>m/s</string>
+                                      <string>cm/s</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -1053,11 +1162,52 @@ QPushButton:hover {
                             </layout>
                            </widget>
                           </item>
+                          <item>
+                           <widget class="QFrame" name="frame_15">
+                            <property name="maximumSize">
+                             <size>
+                              <width>16777215</width>
+                              <height>16777215</height>
+                             </size>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_16">
+                             <item>
+                              <widget class="QPushButton" name="pushButton_3">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="imagenes.qrc">
+                                 <normaloff>:/resources/images/eliminar.png</normaloff>:/resources/images/eliminar.png</iconset>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
                          </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="f_cinta_1_c_8">
+                        <widget class="QFrame" name="f_c_1_cinta_4">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -1067,7 +1217,7 @@ QPushButton:hover {
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="3,1">
+                         <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="7,4,1">
                           <item>
                            <widget class="QFrame" name="frame_35">
                             <property name="frameShape">
@@ -1078,7 +1228,7 @@ QPushButton:hover {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_21" stretch="1,1">
                              <item>
-                              <widget class="QLabel" name="l_nombre_cinta_1_c_8">
+                              <widget class="QLabel" name="c_1_nombre_cinta_4">
                                <property name="text">
                                 <string>CINTA 4</string>
                                </property>
@@ -1170,7 +1320,7 @@ QPushButton:hover {
                                    <item>
                                     <widget class="QLabel" name="label_12">
                                      <property name="text">
-                                      <string>m/s</string>
+                                      <string>cm/s</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -1263,11 +1413,46 @@ QPushButton:hover {
                             </layout>
                            </widget>
                           </item>
+                          <item>
+                           <widget class="QFrame" name="frame_16">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_17">
+                             <item>
+                              <widget class="QPushButton" name="pushButton_4">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="imagenes.qrc">
+                                 <normaloff>:/resources/images/eliminar.png</normaloff>:/resources/images/eliminar.png</iconset>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
                          </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="f_cinta_1_c_9">
+                        <widget class="QFrame" name="f_c_1_cinta_5">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -1277,7 +1462,7 @@ QPushButton:hover {
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <layout class="QHBoxLayout" name="horizontalLayout_30" stretch="3,1">
+                         <layout class="QHBoxLayout" name="horizontalLayout_30" stretch="7,4,1">
                           <item>
                            <widget class="QFrame" name="frame_39">
                             <property name="frameShape">
@@ -1288,7 +1473,7 @@ QPushButton:hover {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_23" stretch="1,1">
                              <item>
-                              <widget class="QLabel" name="l_nombre_cinta_1_c_9">
+                              <widget class="QLabel" name="c_1_nombre_cinta_5">
                                <property name="text">
                                 <string>CINTA 5</string>
                                </property>
@@ -1380,7 +1565,7 @@ QPushButton:hover {
                                    <item>
                                     <widget class="QLabel" name="label_13">
                                      <property name="text">
-                                      <string>m/s</string>
+                                      <string>cm/s</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -1473,6 +1658,35 @@ QPushButton:hover {
                             </layout>
                            </widget>
                           </item>
+                          <item>
+                           <widget class="QFrame" name="frame_17">
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_44">
+                             <item>
+                              <widget class="QPushButton" name="pushButton_5">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="icon">
+                                <iconset resource="imagenes.qrc">
+                                 <normaloff>:/resources/images/eliminar.png</normaloff>:/resources/images/eliminar.png</iconset>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
                          </layout>
                         </widget>
                        </item>
@@ -1559,6 +1773,9 @@ QPushButton:hover {
                       <property name="text">
                        <string>SENSORES</string>
                       </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
                      </widget>
                     </item>
                     <item>
@@ -1577,7 +1794,13 @@ QPushButton:hover {
                       </property>
                       <layout class="QVBoxLayout" name="verticalLayout_7">
                        <item>
-                        <widget class="QFrame" name="f_sensor_1_c_10">
+                        <widget class="QFrame" name="f_c_1_t_1">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -1598,7 +1821,7 @@ QPushButton:hover {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_25" stretch="1">
                              <item>
-                              <widget class="QLabel" name="l_nombre_sensor_t_1_c_10">
+                              <widget class="QLabel" name="lab_nombre_c_1_t_1">
                                <property name="text">
                                 <string>SENSOR T 1</string>
                                </property>
@@ -1617,35 +1840,19 @@ QPushButton:hover {
                             </property>
                             <layout class="QHBoxLayout" name="horizontalLayout_6">
                              <item>
-                              <widget class="QLabel" name="label_4">
+                              <widget class="QLabel" name="label_c_1_t_1">
                                <property name="text">
-                                <string>min</string>
-                               </property>
-                              </widget>
-                             </item>
-                             <item>
-                              <widget class="QProgressBar" name="pb_sensor_t_1_c_10">
-                               <property name="styleSheet">
-                                <string notr="true">QProgressBar::chunk {
-    
-	background-color: rgb(39, 39, 39);
-}</string>
-                               </property>
-                               <property name="value">
-                                <number>100</number>
+                                <string>--</string>
                                </property>
                                <property name="alignment">
-                                <set>Qt::AlignCenter</set>
-                               </property>
-                               <property name="textVisible">
-                                <bool>true</bool>
+                                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                                </property>
                               </widget>
                              </item>
                              <item>
                               <widget class="QLabel" name="label_5">
                                <property name="text">
-                                <string>max</string>
+                                <string>°C</string>
                                </property>
                               </widget>
                              </item>
@@ -1656,7 +1863,13 @@ QPushButton:hover {
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="f_sensor_1_c_11">
+                        <widget class="QFrame" name="f_c_1_t_2">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -1677,7 +1890,7 @@ QPushButton:hover {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_26" stretch="1">
                              <item>
-                              <widget class="QLabel" name="l_nombre_sensor_t_1_c_11">
+                              <widget class="QLabel" name="lab_nombre_c_1_t_2">
                                <property name="text">
                                 <string>SENSOR T 1</string>
                                </property>
@@ -1703,7 +1916,7 @@ QPushButton:hover {
                               </widget>
                              </item>
                              <item>
-                              <widget class="QProgressBar" name="pb_sensor_t_1_c_11">
+                              <widget class="QProgressBar" name="pb_c_1_t_2">
                                <property name="styleSheet">
                                 <string notr="true">QProgressBar::chunk {
     
@@ -1735,7 +1948,13 @@ QPushButton:hover {
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="f_sensor_ir_1_c_1">
+                        <widget class="QFrame" name="f_c_1_ir_1">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -1756,7 +1975,7 @@ QPushButton:hover {
                             </property>
                             <layout class="QVBoxLayout" name="verticalLayout_33" stretch="1">
                              <item>
-                              <widget class="QLabel" name="l_nombre_sensor_ir_1_c_14">
+                              <widget class="QLabel" name="lab_nombre_c_1_ir_1">
                                <property name="text">
                                 <string>SENSOR IR 1</string>
                                </property>
@@ -1834,7 +2053,13 @@ QPushButton:hover {
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="f_sensor_ir_2_c_1">
+                        <widget class="QFrame" name="f_c_1_ir_2">
+                         <property name="maximumSize">
+                          <size>
+                           <width>16777215</width>
+                           <height>80</height>
+                          </size>
+                         </property>
                          <property name="styleSheet">
                           <string notr="true">background-color: rgb(63, 63, 63);</string>
                          </property>
@@ -1982,6 +2207,18 @@ QPushButton:hover {
          </widget>
          <widget class="QWidget" name="controlador_2">
           <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,10">
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QFrame" name="f_superior_c_2">
              <property name="styleSheet">
@@ -1994,100 +2231,119 @@ color: rgb(255, 255, 255);</string>
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="1,1,1,2,2,1,2,1">
+             <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="4,1,3">
               <property name="leftMargin">
-               <number>0</number>
+               <number>20</number>
               </property>
               <property name="topMargin">
                <number>5</number>
               </property>
               <property name="rightMargin">
-               <number>0</number>
+               <number>20</number>
               </property>
               <property name="bottomMargin">
                <number>5</number>
               </property>
               <item>
-               <spacer name="horizontalSpacer_7">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
+               <widget class="QFrame" name="frame_2">
+                <property name="maximumSize">
                  <size>
-                  <width>55</width>
-                  <height>20</height>
+                  <width>400</width>
+                  <height>16777215</height>
                  </size>
                 </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_8">
-                <property name="font">
-                 <font>
-                  <family>Kollektif</family>
-                  <pointsize>9</pointsize>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
                 </property>
-                <property name="text">
-                 <string>Controlador 2</string>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
                 </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_8">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>55</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btn_desconectado_2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Kollektif</family>
-                  <pointsize>9</pointsize>
-                  <italic>false</italic>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(255, 0, 0);
+                <layout class="QHBoxLayout" name="horizontalLayout_12" stretch="1,3,3">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_8">
+                   <property name="font">
+                    <font>
+                     <family>Kollektif</family>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Controlador 2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_desconectado_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>200</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Kollektif</family>
+                     <pointsize>9</pointsize>
+                     <italic>false</italic>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(255, 0, 0);
 color: rgb(255, 255, 255);</string>
-                </property>
-                <property name="text">
-                 <string>DESCONECTADO</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="btn_conectado_2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(0, 255, 0);
+                   </property>
+                   <property name="text">
+                    <string>DESCONECTADO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btn_conectado_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>200</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgb(0, 255, 0);
 color: rgb(255, 255, 255);</string>
-                </property>
-                <property name="text">
-                 <string>CONECTADO</string>
-                </property>
+                   </property>
+                   <property name="text">
+                    <string>CONECTADO</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
@@ -2111,6 +2367,12 @@ color: rgb(255, 255, 255);</string>
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>200</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
                 <property name="font">
                  <font>
                   <family>Kollektif</family>
@@ -2129,22 +2391,9 @@ QPushButton:hover {
 }</string>
                 </property>
                 <property name="text">
-                 <string>ALARMA</string>
+                 <string>ACTIVAR ALARMA</string>
                 </property>
                </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_11">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>55</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
               </item>
              </layout>
             </widget>
@@ -2212,6 +2461,12 @@ QPushButton:hover {
                    <layout class="QVBoxLayout" name="verticalLayout_12">
                     <item>
                      <widget class="QFrame" name="f_cinta_1_c_10">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>80</height>
+                       </size>
+                      </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(63, 63, 63);</string>
                       </property>
@@ -2422,6 +2677,12 @@ QPushButton:hover {
                     </item>
                     <item>
                      <widget class="QFrame" name="f_cinta_1_c_11">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>80</height>
+                       </size>
+                      </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(63, 63, 63);</string>
                       </property>
@@ -2632,6 +2893,12 @@ QPushButton:hover {
                     </item>
                     <item>
                      <widget class="QFrame" name="f_cinta_1_c_12">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>80</height>
+                       </size>
+                      </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(63, 63, 63);</string>
                       </property>
@@ -2923,6 +3190,9 @@ QPushButton:hover {
                    <property name="text">
                     <string>SENSORES</string>
                    </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
                   </widget>
                  </item>
                  <item>
@@ -2942,6 +3212,12 @@ QPushButton:hover {
                    <layout class="QVBoxLayout" name="verticalLayout_14">
                     <item>
                      <widget class="QFrame" name="f_sensor_1_c_12">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>80</height>
+                       </size>
+                      </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(63, 63, 63);</string>
                       </property>
@@ -3021,6 +3297,12 @@ QPushButton:hover {
                     </item>
                     <item>
                      <widget class="QFrame" name="f_sensor_ir_1_c_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>80</height>
+                       </size>
+                      </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(63, 63, 63);</string>
                       </property>
@@ -3030,7 +3312,7 @@ QPushButton:hover {
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_54" stretch="1,3">
+                      <layout class="QHBoxLayout" name="horizontalLayout_54" stretch="1,1">
                        <item>
                         <widget class="QFrame" name="frame_75">
                          <property name="frameShape">
@@ -3120,6 +3402,12 @@ QPushButton:hover {
                     </item>
                     <item>
                      <widget class="QFrame" name="f_sensor_ir_2_c_2">
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>80</height>
+                       </size>
+                      </property>
                       <property name="styleSheet">
                        <string notr="true">background-color: rgb(63, 63, 63);</string>
                       </property>
@@ -3129,7 +3417,7 @@ QPushButton:hover {
                       <property name="frameShadow">
                        <enum>QFrame::Raised</enum>
                       </property>
-                      <layout class="QHBoxLayout" name="horizontalLayout_55" stretch="1,3">
+                      <layout class="QHBoxLayout" name="horizontalLayout_55" stretch="1,1">
                        <item>
                         <widget class="QFrame" name="frame_77">
                          <property name="frameShape">
@@ -3270,6 +3558,8 @@ QPushButton:hover {
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="imagenes.qrc"/>
+ </resources>
  <connections/>
 </ui>
