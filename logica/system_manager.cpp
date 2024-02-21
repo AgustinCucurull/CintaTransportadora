@@ -85,7 +85,7 @@ void SystemManager::EditSensor(std::string &name, std::string &new_name, Port po
 // -----------------------------------------------------------------------------
 
 void SystemManager::RemoveBoardFromSystem(std::string &name) {
-  return;
+  blackboard_instance->RemoveBoard();
 }
 
 void SystemManager::RemoveSensorFromSystem(std::string &name) {
@@ -94,6 +94,16 @@ void SystemManager::RemoveSensorFromSystem(std::string &name) {
 
 void SystemManager::RemoveBeltFromSystem(std::string &name) {
   blackboard_instance->RemoveBelt(name);
+}
+
+// -----------------------------------------------------------------------------
+
+float SystemManager::GetBeltSpeed(std::string &name, Port port) {
+  return blackboard_instance->ReadBelt(name);
+}
+
+Data SystemManager::GetSensorData(std::string &name, Port port) {
+  return blackboard_instance->ReadSensor(name);
 }
 
 // -----------------------------------------------------------------------------

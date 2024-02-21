@@ -15,7 +15,7 @@ enum class ProgramState {
   QUIT
 };
 
-int main(int argc, char const *argv[]) {
+int main() {
   BlackBoard* blackboard = BlackBoard::GetInstance(); // Get the singleton instance
   SystemManager manager(blackboard);
 
@@ -23,7 +23,7 @@ int main(int argc, char const *argv[]) {
   std::string sensor1 = "SensorIR";
   std::string sensor2 = "SensorTE";
   std::string belt1 = "Cinta 1";
-  std::string belt2 = "Cinta 1";
+  std::string belt2 = "Cinta 2";
   
   std::cout << "Agregando placa al sistema" << std::endl;
   manager.AddBoardToSystem(boardname, 1, 2, BoardType::ARDUINO);
@@ -36,7 +36,31 @@ int main(int argc, char const *argv[]) {
   std::cout << "Agregando cinta2 al sistema" << std::endl;
   manager.AddBeltToSystem(belt2, Port(std::string("3"), 0x4), float(10.0f), float(1.0f));
 
-  std::cout << "Agregando placa al sistema" << std::endl;
+  std::cout << "Se han agregado todas las piezas al sistema." << std::endl;
+
+  #if _DEBUG_
+    blackboard->PrintBoard();
+    blackboard->PrintSensors();
+    blackboard->PrintBelts();
+  #endif
+
+  std::cout << "Data del primer sensor: "
+            << manager.GetSensorData(sensor1, Port(std::string("0"), 0x1)).GetValue().digital << std::endl;
+
+  std::cout << "Data del segundo sensor: "
+            << manager.GetSensorData(sensor2, Port(std::string("1"), 0x2)).GetValue().analog << std::endl;
+
+  std::cout << "Eliminando el segundo sensor." << std::endl;
+  manager.RemoveSensorFromSystem(sensor2);
+
+  std::cout << "Eliminando la primera cinta." << std::endl;
+  manager.RemoveBeltFromSystem(belt1);
+
+  #if _DEBUG_
+    blackboard->PrintBoard();
+    blackboard->PrintSensors();
+    blackboard->PrintBelts();
+  #endif
 
   return 0;
 }

@@ -41,7 +41,8 @@ public:
   void UpdateSensors();
   void UpdateBelts();
   
-  Data ReadSensor(std::string &name);
+  Data ReadSensor(const std::string &name);
+  float ReadBelt(const std::string &name);
   Data ReadPort(Port port);
   void WritePort(Port port, Data data);
 
@@ -56,8 +57,15 @@ public:
   void EditSensor(std::string &name, Port port, float lower_limit, float upper_limit);
   void EditSensor(std::string &name, std::string &new_name, Port port, float lower_limit, float upper_limit);
 
+  void RemoveBoard();
   void RemoveSensor(std::string &name);
   void RemoveBelt(std::string &name);
+
+  #ifdef _DEBUG_
+    void PrintBoard() const;
+    void PrintSensors() const;
+    void PrintBelts() const;
+  #endif
 };
 
 #endif

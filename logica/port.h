@@ -19,7 +19,7 @@ public:
   }
 
   std::string GetCode();
-  uint8_t GetAddress();
+  uint32_t GetAddress();
 
   void SetCode(std::string code_);
   void SetAddress(uint8_t address_);

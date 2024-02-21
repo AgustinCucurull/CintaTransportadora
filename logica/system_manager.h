@@ -29,8 +29,11 @@ public:
 
   // Remove objects from the blackboard (and delete them)
   void RemoveBoardFromSystem(std::string &name);
-  void RemoveSensorFromSystem(std::string &name);
   void RemoveBeltFromSystem(std::string &name);
+  void RemoveSensorFromSystem(std::string &name);
+
+  float GetBeltSpeed(std::string &name, Port port);
+  Data GetSensorData(std::string &name, Port port);
 };
 
 #endif

@@ -5,3 +5,4 @@ Estados/conexionconqt.cpp
 Estados/conexionconqt.h
 Estados/detenido.h
 .vscode/
+logica/main.cpp
