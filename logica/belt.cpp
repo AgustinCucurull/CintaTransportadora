@@ -81,6 +81,10 @@ void Belt::UpdateAlarmStatus(bool alarm) {
 // *    transition to the state "Halted".
 // * If these conditions are not met, the state remains unchanged.
 void Belt::UpdateState() {
+  if (this->state == nullptr) {
+    this->state = std::make_unique<StateHalted>(this);
+  }
+
   if (this->alarm_active && (this->state->GetType() != StateType::ALARM)) {
     this->state = std::make_unique<StateAlarm>(this);
     return;
@@ -88,11 +92,13 @@ void Belt::UpdateState() {
   
   switch(this->state->GetType()) {
   case StateType::HALTED:
+    // This should be if (obj_speed > 0 && !stop_button_pressed)
     if (this->objective_speed > 0.0f) {
       this->state = std::make_unique<StateRunning>(this);
     }
     break;
   case StateType::RUNNING:
+    // This should be if (obj_speed = 0 || stop_button_pressed)
     if (AreFloatsEqual(this->objective_speed, 0.0f)) {
       this->state = std::make_unique<StateHalted>(this);
     }

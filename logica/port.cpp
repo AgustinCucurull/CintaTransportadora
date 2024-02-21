@@ -7,7 +7,7 @@ std::string Port::GetCode() {
   return this->code;
 }
 
-uint8_t Port::GetAddress() {
+uint32_t Port::GetAddress() {
   return this->address;
 }
 

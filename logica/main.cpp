@@ -1,7 +1,12 @@
 #include <iostream>
+#include <string>
 
+#include "./controlboard_drivers/board_type.h"
 #include "./controlboard_drivers/controlboard_arduino.h"
+#include "belt.h"
 #include "blackboard.h"
+#include "system_manager.h"
+#include "port.h"
 
 enum class ProgramState {
   SENSOR_WINDOW,
@@ -10,61 +15,52 @@ enum class ProgramState {
   QUIT
 };
 
-void ReadAndUpdateData(BlackBoard *blackboard, ProgramState &program_state) {
-  bool updating = true;
+int main() {
+  BlackBoard* blackboard = BlackBoard::GetInstance(); // Get the singleton instance
+  SystemManager manager(blackboard);
 
-  do {
-    // if event "AddSensor"
-    // program_state = ProgramState::SENSOR_WINDOW;
-    // updating = false;
-    // break;
+  std::string boardname = "Placa Arduino";
+  std::string sensor1 = "SensorIR";
+  std::string sensor2 = "SensorTE";
+  std::string belt1 = "Cinta 1";
+  std::string belt2 = "Cinta 2";
+  
+  std::cout << "Agregando placa al sistema" << std::endl;
+  manager.AddBoardToSystem(boardname, 1, 2, BoardType::ARDUINO);
+  std::cout << "Agregando sensor1 al sistema" << std::endl;
+  manager.AddSensorToSystem(sensor1, Port(std::string("0"), 0x1), SensorType::IR);
+  std::cout << "Agregando sensor2 al sistema" << std::endl;
+  manager.AddSensorToSystem(sensor2, Port(std::string("1"), 0x2), float(0.0f), float(100.0f), SensorType::TEMPERATURE);
+  std::cout << "Agregando cinta1 al sistema" << std::endl;
+  manager.AddBeltToSystem(belt1, Port(std::string("2"), 0x3), float(20.0f), float(2.0f));
+  std::cout << "Agregando cinta2 al sistema" << std::endl;
+  manager.AddBeltToSystem(belt2, Port(std::string("3"), 0x4), float(10.0f), float(1.0f));
 
-    // if event "AddBelt"
-    // program_state = ProgramState::SENSOR_WINDOW;
-    // updating = false;
-    // break;
+  std::cout << "Se han agregado todas las piezas al sistema." << std::endl;
 
-    blackboard->UpdateSensors();
-    blackboard->UpdateBelts();
-  } while (updating);
-}
+  #if _DEBUG_
+    blackboard->PrintBoard();
+    blackboard->PrintSensors();
+    blackboard->PrintBelts();
+  #endif
 
-void AddSensor(BlackBoard *blackboard, ProgramState program_state) {
-  ISensor sensor = new SensorTemperature();
-  //Get name
-  sensor->SetName(name);
-}
+  std::cout << "Data del primer sensor: "
+            << manager.GetSensorData(sensor1, Port(std::string("0"), 0x1)).GetValue().digital << std::endl;
 
-int main(int argc, char const *argv[]) {
-  std::shared_ptr<IControlBoard> board_arduino = new ControlBoardArduino;
-  // Initialize board_arduino
-  // (...)
+  std::cout << "Data del segundo sensor: "
+            << manager.GetSensorData(sensor2, Port(std::string("1"), 0x2)).GetValue().analog << std::endl;
 
-  BlackBoard blackboard;
-  blackboard.SetControlBoard(board_arduino);
-  // Add sensors and belts to the blackboard
-  // (...)
+  std::cout << "Eliminando el segundo sensor." << std::endl;
+  manager.RemoveSensorFromSystem(sensor2);
 
-  ProgramState program_state = ProgramState::MAIN_WINDOW;
-  bool running = true;
+  std::cout << "Eliminando la primera cinta." << std::endl;
+  manager.RemoveBeltFromSystem(belt1);
 
-  do {
-    switch(program_state) {
-    case ProgramState::MAIN_WINDOW;
-      ReadAndUpdateData(&blackboard, program_state);
-      break;
-    case ProgramState::SENSOR_WINDOW:
-      AddSensor(&blackboard, program_state);
-      break;
-    case ProgramState::BELT_WINDOW:
-      AddBelt(&blackboard, program_state);
-      break;
-    case ProgramState::QUIT:
-      running = false;
-    }
-  } while (running)
-
-  // Clean memory etc.
+  #if _DEBUG_
+    blackboard->PrintBoard();
+    blackboard->PrintSensors();
+    blackboard->PrintBelts();
+  #endif
 
   return 0;
 }

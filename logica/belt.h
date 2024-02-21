@@ -4,25 +4,32 @@
 #include <string>
 #include <memory>
 #include "./states/istate.h"
-#include "./states/state_base.h"
-#include "./states/state_type.h"
 #include "port.h"
 
 class Belt {
 protected:
-  Port port;
   std::string name;
+  Port port;
 
   float length;
   float time;
-  float objective_speed = 0;
-  float current_speed = 0;
+  float objective_speed;
+  float current_speed;
 
   bool alarm_active = false;
   std::unique_ptr<IState> state;
 
 public:
-  Belt(Port port_) : port(port_) { UpdateState(); }
+  Belt(std::string& name_, Port port_, float length_, float speed)
+    : name(name_), port(port_), length(length_), objective_speed(speed)
+    { current_speed = 0; alarm_active = false; UpdateState(); }
+    
+  Belt(Port port_) : port(port_) {
+    current_speed = 0;
+    alarm_active = false;
+    UpdateState();
+    }
+
   ~Belt() = default;
 
   void SetPort(Port port_);
